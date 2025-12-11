@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kaden Hunt's Project Portfolio" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/navigation.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Projects - Kaden Hunt Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav class="topnav" id="myTopnav">
+        <div class="nav-wrapper">
+          <a href="index.html" class="logo">KH</a>
+          <div class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="projects.html" class="active">Work</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://uxdesign.cc/" target="_blank">Blog</a>
+          </div>
+          <button class="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+        <div class="mobile-menu">
+          <div class="menu-header">
+            <span>Menu</span>
+            <button class="close-menu" aria-label="Close Menu">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+          <a href="index.html">Home</a>
+          <a href="projects.html" class="active">Work</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://uxdesign.cc/" target="_blank">Blog</a>
+        </div>
+      </nav>
+      <div class="overlay"></div>
+    </header>
+
+    <main>
+      <section id="projects">
+        <h1>My Projects</h1>
+        <div class="project-grid">
+          <!-- Game Project-->
+          <article class="project-item game-project">
+            <div class="project-header">
+              <h2>Big Red Drop</h2>
+              <div class="project-gallery">
+                <div class="game-preview">
+                  <img
+                    src="assets/images/game-thumbnail.png"
+                    alt="Big Red Drop - WKU Themed Plinko Game"
+                  />
+                  <a
+                    href="https://gd.games/kaden_hunt/bigreddrop"
+                    class="play-overlay"
+                    target="_blank"
+                  >
+                    <i class="fa fa-play-circle fa-3x"></i>
+                    <span style="margin-top: 1rem">Play Game</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <button class="expand-button" aria-expanded="false">
+              Learn More <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="project-content collapsed">
+              <div class="tabs">
+                <button class="tab-btn active" data-tab="game-overview">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="game-features">
+                  Features
+                </button>
+                <button class="tab-btn" data-tab="game-development">
+                  Development
+                </button>
+              </div>
+
+              <div id="game-overview" class="tab-content active">
+                <h3>Project Overview</h3>
+                <p>
+                  Big Red Drop is a WKU-themed Plinko-style game where players
+                  control falling balls through obstacles to score points. The
+                  game features physics-based gameplay with WKU's mascot Big Red
+                  and custom-designed assets.
+                </p>
+                <div class="project-meta">
+                  <h4>Technologies Used</h4>
+                  <ul class="tech-stack">
+                    <li>GDevelop 5 Game Engine</li>
+                    <li>Adobe Illustrator (Asset Creation)</li>
+                    <li>Event-Based Programming</li>
+                  </ul>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://gd.games/kaden_hunt/bigreddrop"
+                    class="button primary"
+                    target="_blank"
+                    >Play Full Screen</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div id="game-features" class="tab-content">
+              <h3>Game Features</h3>
+              <ul>
+                <li>
+                  Physics-Based Gameplay: Realistic ball physics using
+                  GDevelop's physics engine
+                </li>
+                <li>
+                  Score System: Dynamic point tracking with multipliers and high
+                  score saving
+                </li>
+                <li>
+                  WKU Theme: Custom-designed assets featuring Big Red and WKU
+                  colors
+                </li>
+                <li>Interactive Elements:</li>
+                <ul>
+                  <li>Responsive click-to-drop controls</li>
+                  <li>Multiple drop zones and paths</li>
+                  <li>Score multiplier zones</li>
+                  <li>Obstacle interactions</li>
+                </ul>
+                <li>
+                  Visual Feedback: Particle effects and animations for enhanced
+                  user experience
+                </li>
+                <li>Mobile-Friendly: Touch controls for mobile devices</li>
+              </ul>
+            </div>
+
+            <div id="game-development" class="tab-content">
+              <h3>Development Process</h3>
+              <ul>
+                <li>Planning & Design:</li>
+                <ul>
+                  <li>Initial concept sketches and gameplay mechanics</li>
+                  <li>WKU theme integration planning</li>
+                  <li>Asset creation in Adobe Illustrator</li>
+                </ul>
+                <li>Implementation:</li>
+                <ul>
+                  <li>GDevelop event system setup for game logic</li>
+                  <li>Physics calibration for optimal gameplay</li>
+                  <li>Score system development</li>
+                  <li>UI/UX implementation</li>
+                </ul>
+                <li>Testing & Refinement:</li>
+                <ul>
+                  <li>Playtesting for balance adjustments</li>
+                  <li>Performance optimization</li>
+                  <li>Bug fixes and polish</li>
+                </ul>
+              </ul>
+            </div>
+          </article>
+          <article class="project-item web-dev-project">
+            <div class="project-header">
+              <h2>Web Development Final Project</h2>
+              <div class="project-gallery">
+                
+                <div class="gallery-container">
+                  <button class="gallery-nav prev" aria-label="Previous image">
+                    ❮
+                  </button>
+                  <div class="gallery-images" id="projectGallery">
+                    <figure>
+                      <img
+                        src="assets/projects/demo/finalscreenshot1.png"
+                        alt="Homepage Design"
+                        class="project-image"
+                      />
+                      <figcaption>Final Homepage Implementation</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        src="assets/projects/demo/finalscreenshot2.png"
+                        alt="Responsive Design"
+                        class="project-image"
+                      />
+                      <figcaption>About section with resources</figcaption>
+                    </figure>
+                    <figure>
+                      <img
+                        src="assets/projects/demo/finalscreenshot3.png"
+                        alt="Features Overview"
+                        class="project-image"
+                      />
+                      <figcaption>Contact Page with form</figcaption>
+                    </figure>
+                  </div>
+                  <div
+                    id="projectDemo"
+                    style="display: none"
+                    class="demo-container"
+                  >
+                    <iframe
+                      src="assets/projects/demo/index.html"
+                      title="Live Demo"
+                    ></iframe>
+                  </div>
+                  <button class="gallery-nav next" aria-label="Next image">
+                    ❯
+                  </button>
+                  <div class="gallery-dots"></div>
+                </div>
+                <div class="project-actions">
+                  <button class="demo-toggle" onclick="toggleDemo()">
+                    <i class="fa fa-desktop"></i> Toggle Demo
+                  </button>
+                  <a
+                    href="assets/projects/demo/index.html"
+                    target="_blank"
+                    class="view-demo"
+                  >
+                    <i class="fa fa-external-link"></i> Open in New Tab
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <button class="expand-button" aria-expanded="false">
+              Learn More <i class="fa fa-chevron-down"></i>
+            </button>
+
+            <div class="project-content collapsed">
+              <div class="tabs">
+                <button class="tab-btn active" data-tab="web-overview">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="web-process">
+                  Development
+                </button>
+                <button class="tab-btn" data-tab="web-tech">
+                  Technologies
+                </button>
+              </div>
+
+              <div id="web-overview" class="tab-content active">
+                <h3>Project Overview</h3>
+                <p>
+                  A timed development challenge where I was given a basic
+                  documentation package and tasked with creating a complete,
+                  responsive website from scratch. Starting with only content
+                  requirements, I designed and implemented a fully functional
+                  site focusing on technology's impact on modern life.
+                </p>
+                <h4>Project Requirements:</h4>
+                <ul>
+                  <li>Build complete website from scratch within 2 hours</li>
+                  <li>Create responsive design without frameworks</li>
+                  <li>Implement navigation and content structure</li>
+                  <li>Add interactive features and animations</li>
+                  <li>Ensure cross-browser compatibility</li>
+                </ul>
+              </div>
+
+              <div id="web-process" class="tab-content">
+                <h3>Development Process</h3>
+                <ul>
+                  <li>
+                    <strong>Planning Phase (20 mins):</strong> Wireframes,
+                    content organization, feature prioritization
+                  </li>
+                  <li>
+                    <strong>Core Development (1 hour):</strong> HTML structure,
+                    CSS styling, JavaScript functionality
+                  </li>
+                  <li>
+                    <strong>Refinement (40 mins):</strong> Visual styling,
+                    cross-browser testing, performance optimization
+                  </li>
+                </ul>
+              </div>
+
+              <div id="web-tech" class="tab-content">
+                <h3>Technologies Used</h3>
+                <div class="tech-stack">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS3 with Flexbox/Grid</li>
+                    <li>JavaScript</li>
+                    <li>Chrome DevTools</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Adobe Creative Suite Project -->
+          <article class="project-item creative-suite-project">
+            <div class="project-header">
+              <h2>Design & Creative Work</h2>
+              <div class="project-gallery">
+                <div class="gallery-container">
+                  <button class="gallery-nav prev" aria-label="Previous image">
+                    ❮
+                  </button>
+                  <div class="gallery-images">
+                    <figure data-index="0">
+                      <img
+                        src="assets/images/adobe/desert-rollers-logo.png"
+                        alt="Albuquerque Desert Rollers Logo"
+                      />
+                      <figcaption>Custom Bowling Team Logo Design</figcaption>
+                    </figure>
+                    <figure data-index="1">
+                      <img
+                        src="assets/images/adobe/wku-infographic.png"
+                        alt="WKU Campus Infographic"
+                      />
+                      <figcaption>WKU Campus Infographic</figcaption>
+                    </figure>
+                    <figure data-index="2">
+                      <img
+                        src="assets/images/adobe/salad-illustration.png"
+                        alt="Digital Salad Illustration"
+                      />
+                      <figcaption>
+                        First Illustrator Project - Digital Salad
+                      </figcaption>
+                    </figure>
+                    <figure data-index="3">
+                      <img
+                        src="assets/images/adobe/denzel-curry-collage.png"
+                        alt="Denzel Curry Photo Collage"
+                      />
+                      <figcaption>Denzel Curry Photo Collage</figcaption>
+                    </figure>
+                    <figure data-index="4">
+                      <img
+                        src="assets/images/adobe/email-blast.png"
+                        alt="Academic Email Campaign Design"
+                      />
+                      <figcaption>Email Blast</figcaption>
+                    </figure>
+                    <figure data-index="5">
+                      <img
+                        src="assets/images/adobe/golf-animation.gif"
+                        alt="Golf Animation"
+                      />
+                      <figcaption>
+                        Interactive Golf Animation with Sound
+                      </figcaption>
+                    </figure>
+                    <figure data-index="6">
+                      <img
+                        src="assets/images/adobe/website-redesign.png"
+                        alt="Website Redesign"
+                      />
+                      <figcaption>Website Redesign Project</figcaption>
+                    </figure>
+                  </div>
+                  <button class="gallery-nav next" aria-label="Next image">
+                    ❯
+                  </button>
+                  <div class="gallery-dots"></div>
+                </div>
+              </div>
+            </div>
+            <button class="expand-button" aria-expanded="false">
+              Learn More <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="project-content collapsed">
+              <div class="tabs">
+                <button class="tab-btn active" data-tab="illustrator">
+                  Illustrator
+                </button>
+                <button class="tab-btn" data-tab="photoshop">Photoshop</button>
+                <button class="tab-btn" data-tab="animate">Animate</button>
+                <button class="tab-btn" data-tab="figma">Figma</button>
+              </div>
+
+              <div id="illustrator" class="tab-content active">
+                <h3>Adobe Illustrator Projects</h3>
+                <div class="project-item">
+                  <h4>Albuquerque Desert Rollers - Team Branding</h4>
+                  <p>
+                    Custom logo design and style guide for a bowling team,
+                    featuring:
+                  </p>
+                  <ul>
+                    <li>
+                      Primary, Secondary, and Alternate Logos along with product
+                      mockups
+                    </li>
+                    <li>Made Entirely in Illustrator</li>
+                    <li>Style Guide made in Figma</li>
+                  </ul>
+                </div>
+
+                <div class="project-item">
+                  <h4>WKU Campus Infographic</h4>
+                  <p>Infographic discussing various details of Campus Living</p>
+                </div>
+
+                <div class="project-item">
+                  <h4>Digital Salad Illustration</h4>
+                  <p>
+                    First Illustrator project demonstrating fundamental vector
+                    graphics skills and general Illustrator knowledge.
+                  </p>
+                </div>
+              </div>
+
+              <div id="photoshop" class="tab-content">
+                <h3>Photoshop Artwork</h3>
+                <div class="project-item">
+                  <h4>Denzel Curry Photo Collage</h4>
+                  <p>
+                    Digital photo manipulation and composition featuring musical
+                    artist Denzel Curry. Displayed techniques include: Blending
+                    modes, Layer masks, and Adjustment layers.
+                  </p>
+                </div>
+
+                <div class="project-item">
+                  <h4>Email Campaign Design Study</h4>
+                  <p>
+                    Academic project exploring email marketing design
+                    principles. Design inspired by gaming industry standards.
+                  </p>
+                  <small
+                    >*This is a classroom exercise and is not affiliated with
+                    Nintendo</small
+                  >
+                </div>
+              </div>
+
+              <div id="animate" class="tab-content">
+                <h3>Adobe Animate</h3>
+                <div class="project-item">
+                  <h4>Interactive Golf Animation</h4>
+                  <p>Animated sequence featuring:</p>
+                  <ul>
+                    <li>On time sound effect</li>
+                    <li>Smooth motion tweening</li>
+                    <li>Elements made in Illustrator</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div id="figma" class="tab-content">
+                <h3>UI/UX Design</h3>
+                <div class="project-item">
+                  <h4>Website Redesign Project</h4>
+                  <p>
+                    Complete website redesign focusing on improved user
+                    experience and modern design principles. I went with a more
+                    cohesive color scheme and a more modern layout.
+                  </p>
+                  <div class="before-after">
+                    <a
+                      href="https://www.bgdojo.com/"
+                      class="button secondary"
+                      target="_blank"
+                      >View Original Site</a
+                    >
+                    <a
+                      href="https://www.figma.com/proto/yh6KJ8kfKfcWJKkklBzhx1/KadenHuntWorstWebsiteRedesign?node-id=14-2&node-type=canvas&t=5z4exKKu0oiuunVL-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=14%3A2"
+                      class="button primary"
+                      target="_blank"
+                      >View Figma Prototype</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Previous Portfolio Project -->
+          <article class="project-item portfolio-project">
+            <div class="project-header">
+              <h2>First Portfolio Website</h2>
+              <div class="project-gallery">
+                <div class="gallery-container">
+                  <button class="gallery-nav prev" aria-label="Previous image">
+                    ❮
+                  </button>
+                  <div class="gallery-images">
+                    <figure data-index="0">
+                      <img
+                        src="assets/images/portfolio-v1/contactpage.png"
+                        alt="Portfolio V1 Contact Page"
+                      />
+                      <figcaption>Contact information Page</figcaption>
+                    </figure>
+                    <figure data-index="1">
+                      <img
+                        src="assets/images/portfolio-v1/homepage.png"
+                        alt="Portfolio V1 Homepage"
+                      />
+                      <figcaption>Homepage with About Me section</figcaption>
+                    </figure>
+                    <figure data-index="2">
+                      <img
+                        src="assets/images/portfolio-v1/skillspage.png"
+                        alt="Portfolio V1 Skills Page"
+                      />
+                      <figcaption>Simple Skills page</figcaption>
+                    </figure>
+                    <figure data-index="3">
+                      <img
+                        src="assets/images/portfolio-v1/picturespage.png"
+                        alt="Portfolio V1 Pictures Page"
+                      />
+                      <figcaption>
+                        Image/Video gallery implementation
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <button class="gallery-nav next" aria-label="Next image">
+                    ❯
+                  </button>
+                  <div class="gallery-dots"></div>
+                </div>
+              </div>
+            </div>
+            <button class="expand-button" aria-expanded="false">
+              Learn More <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="project-content collapsed">
+              <div class="tabs">
+                <button class="tab-btn active" data-tab="overview">
+                  Overview
+                </button>
+                <button class="tab-btn" data-tab="challenges">
+                  Challenges
+                </button>
+                <button class="tab-btn" data-tab="lessons">Lessons</button>
+                <button class="tab-btn" data-tab="code">Code</button>
+              </div>
+
+              <div id="overview" class="tab-content active">
+                <h3>Project Overview</h3>
+                <p>
+                  My first portfolio website built using HTML, CSS, and
+                  JavaScript. Features include:
+                </p>
+                <ul>
+                  <li>Responsive navigation system</li>
+                  <li>Concise contact page with hours of availability</li>
+                  <li>
+                    PHP contact form that sent responses to a .txt file (site no
+                    longer live)
+                  </li>
+                  <li>Image gallery</li>
+                </ul>
+              </div>
+
+              <div id="challenges" class="tab-content">
+                <h3>Technical Challenges</h3>
+                <ul>
+                  <li>Implementing responsive design without frameworks</li>
+                  <li>Content creation and management</li>
+                  <li>Implementing accessible navigation</li>
+                  <li>Accepting and storing form responses</li>
+                </ul>
+              </div>
+
+              <div id="lessons" class="tab-content">
+                <h3>Key Learnings</h3>
+                <ul>
+                  <li>Importance of mobile-first design</li>
+                  <li>Value of asset management</li>
+                  <li>CSS architecture best practices</li>
+                  <li>JavaScript DOM manipulation techniques</li>
+                  <li>Understanding project timelines and scope</li>
+                </ul>
+              </div>
+
+              <div id="code" class="tab-content">
+                <div class="code-tabs">
+                  <button class="code-tab active" data-code="html">
+                    HTML Sample
+                  </button>
+                  <button class="code-tab" data-code="css">CSS Sample</button>
+                  <button class="code-tab" data-code="js">
+                    JavaScript Sample
+                  </button>
+                </div>
+
+                <div class="code-content">
+                  <!-- HTML Sample -->
+                  <div id="html-code" class="code-sample active">
+                    <pre><code class="language-html">
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Kaden Hunt - Pictures&lt;/title&gt;
+                &lt;link rel="stylesheet" href="gallery.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;header&gt;
+                    &lt;span&gt;&lt;a href="../index.html"&gt;Home&lt;/a&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;a href="../Contact Page/contact.html"&gt;Contact&lt;/a&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;a href="../Skills Page/skills.html"&gt;Skills&lt;/a&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;a href="pictures.html"&gt;Pictures&lt;/a&gt;&lt;/span&gt;
+                    &lt;span&gt;&lt;a href="../Dorm Tips/dormtips.php"&gt;Dorm Tips&lt;/a&gt;&lt;/span&gt;
+                    &lt;div class="search-box"&gt;
+                        &lt;input type="text" name="query" placeholder="Search..."&gt;
+                    &lt;/div&gt;
+                &lt;/header&gt;
+                &lt;div class="container"&gt;
+                    &lt;div class="slideshow-container"&gt;
+                        &lt;div class="slideshow-wrapper"&gt;
+                            &lt;div class="image-container"&gt;&lt;img src="Emily&I_Patriotic.jpg" alt="Image 1"&gt;&lt;/div&gt;
+                            &lt;div class="image-container"&gt;&lt;img src="HuntingPic.jpg" alt="Image 2"&gt;&lt;/div&gt;
+                            &lt;div class="image-container"&gt;&lt;img src="JordansPic.jpeg" alt="Image 3"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="image-controls"&gt;
+                        &lt;button id="prevBtn"&gt;Previous&lt;/button&gt;
+                        &lt;button id="nextBtn"&gt;Next&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;script src="script.js" defer&gt;&lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;</code></pre>
+                  </div>
+
+                  <!-- CSS Sample -->
+                  <div id="css-code" class="code-sample">
+                    <pre><code class="language-css">
+            body, html {
+                padding: 0;
+                overflow-x: hidden;
+                height: 100%;
+                background-color: darkgray;
+            }
+            
+            header {
+                display: flex;
+                padding: 20px;
+                background-color: red;
+                position: sticky;
+            }
+            
+            header span {
+                padding: 5px;
+                border: 2px solid white;
+                background-color: black;
+                color: white;
+                margin-bottom: 0;
+            }
+            
+            .search-box {
+                margin-left: auto;
+            }
+            
+            .container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .slideshow-container {
+                width: 90%;
+                margin: auto;
+                overflow: hidden;
+            }
+            
+            .slideshow-wrapper {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .image-container {
+                flex: 0 0 auto;
+                margin: 0 auto;
+            }
+            
+            .image-container img {
+                max-width: 100%;
+                max-height: 80vh;
+                height: auto;
+                padding: 8px;
+            }
+            
+            .image-controls {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            
+            .image-controls button {
+                padding: 10px 20px;
+                margin: 0 10px;
+                background-color: #333;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }</code></pre>
+                  </div>
+
+                  <!-- JavaScript Sample -->
+                  <div id="js-code" class="code-sample">
+                    <pre><code class="language-javascript">
+            document.addEventListener("DOMContentLoaded", function() {
+                const wrapper = document.querySelector(".slideshow-wrapper");
+                let currentIndex = 0;
+            
+                function updateSlideshow() {
+                    const items = wrapper.children;
+                    for (let i = 0; i < items.length; i++) {
+                        if (i === currentIndex) {
+                            items[i].style.display = "block";
+                            if (items[i].querySelector("video")) {
+                                items[i].querySelector("video").play();
+                            }
+                        } else {
+                            items[i].style.display = "none";
+                            if (items[i].querySelector("video")) {
+                                items[i].querySelector("video").pause();
+                            }
+                        }
+                    }
+                }
+            
+                document.getElementById("prevBtn").addEventListener("click", () => {
+                    currentIndex = (currentIndex - 1 + wrapper.children.length) % wrapper.children.length;
+                    updateSlideshow();
+                });
+            
+                document.getElementById("nextBtn").addEventListener("click", () => {
+                    currentIndex = (currentIndex + 1) % wrapper.children.length;
+                    updateSlideshow();
+                });
+            
+                updateSlideshow();
+            });</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Kaden Hunt Portfolio</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/kaden-hunt-106360306/"
+          target="_blank"
+          aria-label="LinkedIn Profile"
+        >
+          <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+        |
+        <a
+          href="https://www.instagram.com/_kadenhunt/"
+          target="_blank"
+          aria-label="Instagram Profile"
+        >
+          <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+        </a>
+      </div>
+      <div class="contact-info">
+        <p>
+          Email:
+          <a href="mailto:Kaden.B.Hunt@outlook.com">Kaden.B.Hunt@outlook.com</a>
+        </p>
+        <p>Phone: <a href="tel:+15029743661">(502) 974-3661</a></p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    <div id="lightbox" class="lightbox">
+      <button class="lightbox-close" aria-label="Close lightbox">×</button>
+      <img class="lightbox-image" src="" alt="" />
+    </div>
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+  </body>
+</html>

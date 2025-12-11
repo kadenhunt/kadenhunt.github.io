@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact us about technology's impact on society"
+    />
+    <meta name="keywords" content="contact, technology impact, feedback" />
+    <title>Contact - Technology's Impact</title>
+    <link
+      rel="preload"
+      href="fonts/roboto.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="theme.js"></script>
+  </head>
+  <body class="light-theme">
+    <div class="progress-bar" id="progressBar"></div>
+    <header>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li>
+            <button id="themeToggle" aria-label="Toggle dark mode">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contact-container">
+      <section class="contact fade-in">
+        <h1 class="section-title">Get in Touch</h1>
+        <div class="contact-wrapper">
+          <form class="contact-form animate-up">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="form-input"
+                placeholder="Your name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="form-input"
+                placeholder="your@email.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" class="form-input" required>
+                <option value="">Choose a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                class="form-input"
+                placeholder="Your message here..."
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+
+          <div class="contact-info animate-up">
+            <div class="info-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Location</h3>
+              <p>Tech District, Innovation City</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <p>contact@techimpact.com</p>
+            </div>
+            <div class="info-card">
+              <i class="fas fa-phone"></i>
+              <h3>Phone</h3>
+              <p>(555) 123-4567</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section"></div>
+        <div class="footer-section">
+          <h4>Connect With Us</h4>
+          <div class="footer-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Technology Impact Study. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

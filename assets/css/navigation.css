@@ -1,0 +1,222 @@
+.topnav {
+  background-color: var(--color-nav-bg);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.topnav.scrolled {
+  background-color: var(--color-nav-bg-scrolled);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo Styles */
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #fff, #fff);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  background-image: linear-gradient(90deg, #fff, var(--color-accent));
+  animation: gradientSlide 1s ease forwards;
+}
+
+/* Desktop Menu */
+.desktop-menu {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.desktop-menu a,
+.mobile-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.desktop-menu a::after,
+.mobile-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.desktop-menu a:hover,
+.mobile-menu a:hover,
+.desktop-menu a.active,
+.mobile-menu a.active {
+  color: var(--color-accent);
+}
+
+.desktop-menu a:hover::after,
+.mobile-menu a:hover::after,
+.desktop-menu a.active::after,
+.mobile-menu a.active::after {
+  width: 100%;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1002;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.menu-toggle.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: white;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: white;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: var(--color-nav-bg);
+  z-index: 1000;
+  transition: right 0.3s ease;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+.mobile-menu.active ~ .nav-wrapper .menu-toggle {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-accent);
+  color: #ffffff;
+}
+
+.close-menu {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  position: relative;
+  z-index: 1003; /* Ensure it's above other elements */
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Animations */
+@keyframes gradientSlide {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .desktop-menu a::after,
+  .mobile-menu a::after {
+    bottom: 0; /* Adjust for mobile */
+  }
+}
