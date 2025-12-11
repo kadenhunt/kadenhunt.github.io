@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kaden Hunt's personal blog on CS + UX." />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/navigation.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Blog - Kaden Hunt</title>
+  </head>
+  <body>
+    <header>
+      <nav class="topnav" id="myTopnav">
+        <div class="nav-wrapper">
+          <a href="index.html" class="logo">KH</a>
+          <div class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Work</a>
+            <a href="contact.html">Contact</a>
+            <a href="blog.html" class="active">Blog</a>
+          </div>
+          <button class="menu-toggle" aria-label="Toggle Menu">
+            <span class="hamburger"></span>
+          </button>
+        </div>
+        <div class="mobile-menu">
+          <div class="menu-header">
+            <span>Menu</span>
+            <button class="close-menu" aria-label="Close Menu">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Work</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html" class="active">Blog</a>
+        </div>
+      </nav>
+      <div class="overlay"></div>
+    </header>
+
+    <main class="blog-main">
+      <section class="blog-hero">
+        <p class="eyebrow">CS + UX blog</p>
+        <h1>Notes on building clean, responsive, human products</h1>
+        <p class="muted">
+          Writing about the crossover of computer science, user experience, and front-end buildcraft.
+          Expect practical walkthroughs, research learnings, and a transparent look at my process.
+        </p>
+      </section>
+
+      <section class="blog-list">
+        <article class="blog-entry">
+          <div class="blog-entry-meta">Mar 2024 · Process</div>
+          <h2>Designing nav bars that stay useful on phones</h2>
+          <p>
+            Mobile navigation needs to balance hierarchy, reachability, and legibility. I break down
+            when to favor top tabs versus bottom bars, why motion cues matter, and how to test for
+            confidence.
+          </p>
+          <a class="text-link" href="#">Read more</a>
+        </article>
+
+        <article class="blog-entry">
+          <div class="blog-entry-meta">Jan 2024 · Systems</div>
+          <h2>Threading CS fundamentals into UX work</h2>
+          <p>
+            Data modeling, complexity, and state management often decide whether an interaction feels
+            instant or clunky. Here are the heuristics I use when pairing design decisions with
+            implementation realities.
+          </p>
+          <a class="text-link" href="#">Read more</a>
+        </article>
+
+        <article class="blog-entry">
+          <div class="blog-entry-meta">Nov 2023 · Toolkit</div>
+          <h2>Shipping polished handoffs without slowing down</h2>
+          <p>
+            A reusable checklist for designers and engineers: semantic naming, accessibility sweeps,
+            and the Figma-to-dev notes that keep scope controlled.
+          </p>
+          <a class="text-link" href="#">Read more</a>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Kaden Hunt Portfolio</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/kaden-hunt-106360306/"
+          target="_blank"
+          aria-label="LinkedIn Profile"
+        >
+          <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+        |
+        <a
+          href="https://www.instagram.com/_kadenhunt/"
+          target="_blank"
+          aria-label="Instagram Profile"
+        >
+          <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+        </a>
+      </div>
+      <div class="contact-info">
+        <p>
+          Email:
+          <a href="mailto:Kaden.B.Hunt@outlook.com">Kaden.B.Hunt@outlook.com</a>
+        </p>
+        <p>Phone: <a href="tel:+15029743661">(502) 974-3661</a></p>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+  </body>
+</html>
