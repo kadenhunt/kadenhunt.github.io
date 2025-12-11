@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 document.addEventListener("DOMContentLoaded", () => {
-  const text = "Senior CS + UX student crafting clean, client-ready web experiences.";
+  const text = "CS + UX, side-by-side: designing, prototyping, and shipping responsive products.";
   const typingText = document.getElementById("typing-text");
   let index = 0;
 
