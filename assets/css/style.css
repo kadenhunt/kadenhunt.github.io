@@ -7,18 +7,20 @@
 :root {
   --nav-height: 72px;
 
-  --color-bg: #0b1021;
-  --color-surface: #11192b;
-  --color-surface-muted: #0f172a;
-  --color-text: #e2e8f0;
-  --color-text-muted: #cbd5e1;
-  --color-border: #1f2937;
+  --color-bg: #0b0f16;
+  --color-surface: #101827;
+  --color-surface-muted: #0c1422;
+  --color-text: #e6edf7;
+  --color-text-muted: #b9c5d6;
+  --color-border: #223043;
 
-  --color-nav-bg: rgba(6, 10, 18, 0.95);
-  --color-nav-bg-scrolled: rgba(6, 10, 18, 0.98);
+  --color-nav-bg: rgba(8, 12, 18, 0.92);
+  --color-nav-bg-scrolled: rgba(8, 12, 18, 0.98);
 
-  --color-accent: #f43f5e;
-  --color-accent-strong: #e11d48;
+  /* Metallic accent (cool silver-blue). Keep these as the single source of truth. */
+  --color-accent: #9fb2c9;
+  --color-accent-strong: #d7e1ee;
+  --color-accent-rgb: 159, 178, 201;
 
   --radius-sm: 10px;
   --radius: 16px;
@@ -51,7 +53,7 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 3px solid rgba(185, 28, 28, 0.55);
+  outline: 3px solid rgba(var(--color-accent-rgb), 0.55);
   outline-offset: 2px;
 }
 
@@ -93,8 +95,8 @@ main {
   align-items: center;
   justify-content: center;
   padding: 3rem 1.5rem 4rem;
-  background: radial-gradient(circle at 20% 20%, rgba(244, 63, 94, 0.08), transparent 35%),
-    radial-gradient(circle at 80% 0%, rgba(244, 63, 94, 0.12), transparent 35%),
+  background: radial-gradient(circle at 20% 20%, rgba(var(--color-accent-rgb), 0.08), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(var(--color-accent-rgb), 0.12), transparent 35%),
     linear-gradient(135deg, #0a0f1f 0%, #0d1528 100%);
 }
 
@@ -238,7 +240,7 @@ main {
   align-items: center;
   gap: 0.35rem;
   padding: 0.35rem 0.75rem;
-  background: rgba(244, 63, 94, 0.12);
+  background: rgba(var(--color-accent-rgb), 0.12);
   color: var(--color-accent);
   border-radius: var(--radius-pill);
   font-size: 0.9rem;
@@ -252,7 +254,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   align-items: center;
-  background: radial-gradient(circle at 10% 10%, rgba(244, 63, 94, 0.08), transparent 35%),
+  background: radial-gradient(circle at 10% 10%, rgba(var(--color-accent-rgb), 0.08), transparent 35%),
     radial-gradient(circle at 90% 20%, rgba(36, 99, 235, 0.08), transparent 30%),
     linear-gradient(145deg, rgba(17, 25, 43, 0.95), rgba(13, 19, 35, 0.96));
   border: 1px solid var(--color-border);
@@ -343,6 +345,128 @@ main {
   max-width: 90%;
   margin: 0 auto;
   padding: 2rem;
+}
+
+.project-subitem {
+  margin-top: 0.75rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.project-subitem h4 {
+  margin: 0 0 0.35rem;
+}
+
+.project-subitem p {
+  margin: 0.25rem 0 0.75rem;
+}
+
+/* Blog */
+
+.blog-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* GitHub repos (Projects page) */
+
+.github-section {
+  max-width: 90%;
+  margin: 1.5rem auto 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: var(--shadow-sm);
+}
+
+.repo-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.repo-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.1rem;
+  background: var(--color-surface);
+}
+
+.repo-title {
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.repo-title a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.repo-title a:hover {
+  color: var(--color-accent-strong);
+}
+
+.repo-desc {
+  margin: 0.35rem 0 0.6rem;
+  color: var(--color-text-muted);
+}
+
+.repo-meta {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 768px) {
+  .repo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.post-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.post-title {
+  margin: 0.25rem 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.post-title a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  color: var(--color-accent-strong);
+}
+
+.post-meta {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.post-excerpt {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.post-body {
+  margin-top: 1rem;
+}
+
+.post-body ul {
+  margin: 0.75rem 0 1rem;
+  padding-left: 1.25rem;
 }
 
 .game-project {
