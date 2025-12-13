@@ -4,30 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Kaden Hunt's Project Portfolio" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="assets/css/navigation.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/projects.css" />
-    <title>Projects - Kaden Hunt Portfolio</title>
+    <title>Work - Kaden Hunt</title>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
-      <nav class="topnav" id="myTopnav" aria-label="Primary navigation">
+      <nav class="topnav" id="myTopnav">
         <div class="nav-wrapper">
           <a href="index.html" class="logo">KH</a>
           <div class="desktop-menu">
             <a href="index.html">Home</a>
             <a href="projects.html" class="active">Work</a>
+            <a href="resume.html">Resume</a>
             <a href="contact.html">Contact</a>
-            <a href="blog.html">Blog</a>
           </div>
           <button
             class="menu-toggle"
-            type="button"
-            aria-label="Open menu"
+            aria-label="Toggle Menu"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -37,301 +44,640 @@
         <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
           <div class="menu-header">
             <span>Menu</span>
-            <button class="close-menu" type="button" aria-label="Close menu">
+            <button class="close-menu" aria-label="Close Menu">
               <i class="fa fa-times"></i>
             </button>
           </div>
           <a href="index.html">Home</a>
           <a href="projects.html" class="active">Work</a>
+          <a href="resume.html">Resume</a>
           <a href="contact.html">Contact</a>
-          <a href="blog.html">Blog</a>
         </div>
       </nav>
-      <div class="overlay" aria-hidden="true"></div>
+      <div class="overlay"></div>
     </header>
 
-    <main>
-      <section class="projects-hero">
-        <div class="projects-hero-content">
-          <span class="section-label">Portfolio</span>
-          <h1>Selected Work</h1>
-          <p>A mix of apps, systems projects, and design work from this semester. Each one taught me something new.</p>
-        </div>
+    <main id="main">
+      <section class="projects-header container">
+        <h1>Work</h1>
+        <p class="projects-subtitle">
+          Full-width showcase of selected work — engineering + UX, with real
+          artifacts.
+        </p>
       </section>
 
-      <!-- Featured Project - Full Width Showcase -->
-      <section class="featured-project">
-        <div class="featured-content">
-          <div class="featured-text">
-            <span class="project-category">Android App</span>
-            <h2>TopperNav</h2>
-            <p class="featured-desc">GPS-based campus room finder for WKU. Search a building + room and get pointed there with distance, bearing, and a direction arrow. Built for students who are lost and late.</p>
-            <div class="featured-details">
-              <div class="detail-item">
-                <span class="detail-label">Built with</span>
-                <span class="detail-value">Kotlin, Jetpack Compose, Room DB</span>
+      <section class="showcase-section">
+        <div class="showcase" aria-label="Featured projects showcase">
+          <article class="showcase-item" id="test-automation">
+            <div class="showcase-inner">
+              <div class="showcase-copy">
+                <h2>Disaster Response Test Automation Framework</h2>
+                <p class="project-kicker">
+                  Pytest suite + reporting pipeline with history/trends, wired
+                  into GitHub Actions.
+                </p>
+                <div class="project-meta-row">
+                  <span class="tag">Python</span>
+                  <span class="tag">pytest</span>
+                  <span class="tag">Coverage</span>
+                  <span class="tag">GitHub Actions</span>
+                  <span class="tag">CI/CD</span>
+                </div>
+                <ul class="showcase-bullets">
+                  <li>
+                    Unit, integration, and system tests with case management.
+                  </li>
+                  <li>
+                    Generates a combined report + appends history for trends.
+                  </li>
+                  <li>CI uploads JUnit + coverage artifacts on push/PR.</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="projects/cs396-project2-test-automation/docs/Project%20Technical%20Documentation/Project_2_396.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-file-pdf-o"></i> Technical Doc
+                  </a>
+                  <a
+                    href="projects/cs396-project2-test-automation/.github/workflows/ci.yml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-cogs"></i> CI Workflow
+                  </a>
+                </div>
               </div>
-              <div class="detail-item">
-                <span class="detail-label">Architecture</span>
-                <span class="detail-value">MVVM + Use Cases</span>
-              </div>
-              <div class="detail-item">
-                <span class="detail-label">Key Feature</span>
-                <span class="detail-value">Offline-first with CSV import</span>
-              </div>
-            </div>
-            <div class="featured-actions">
-              <a href="https://github.com/kadenhunt/TopperNav" class="btn-primary" target="_blank" rel="noreferrer">
-                <i class="fa fa-github"></i> View Repository
-              </a>
-            </div>
-          </div>
-          <div class="featured-visual">
-            <div class="phone-mockup">
-              <div class="phone-screen">
-                <div class="app-demo">
-                  <div class="demo-header">TopperNav</div>
-                  <div class="demo-search">
-                    <i class="fa fa-search"></i>
-                    <span>Search rooms...</span>
+              <div class="showcase-media">
+                <div
+                  class="showcase-media-grid"
+                  aria-label="Framework highlights"
+                >
+                  <div class="showcase-tile" aria-label="CI pipeline">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                    <div class="showcase-tile-copy">
+                      <p class="showcase-tile-title">CI pipeline</p>
+                      <p class="showcase-tile-subtitle">
+                        GitHub Actions + artifacts
+                      </p>
+                    </div>
                   </div>
-                  <div class="demo-result">
-                    <div class="demo-arrow">↗</div>
-                    <div class="demo-info">
-                      <strong>Snell Hall B104</strong>
-                      <span>127m • NE • 2 min</span>
+                  <div class="showcase-tile" aria-label="Reporting and trends">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    <div class="showcase-tile-copy">
+                      <p class="showcase-tile-title">Reporting + trends</p>
+                      <p class="showcase-tile-subtitle">
+                        JUnit, coverage, history
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </article>
+
+          <article class="showcase-item" id="microcompiler">
+            <div class="showcase-inner">
+              <div class="showcase-copy">
+                <h2>Three-Pass Compiler (Microservices)</h2>
+                <p class="project-kicker">
+                  Lexer → Parser → Codegen split into Dockerized services with a
+                  gateway `/compile` endpoint.
+                </p>
+                <div class="project-meta-row">
+                  <span class="tag">Docker Compose</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">Microservices</span>
+                  <span class="tag">HTTP APIs</span>
+                </div>
+                <ul class="showcase-bullets">
+                  <li>Gateway orchestrates the full pipeline over HTTP.</li>
+                  <li>Codegen writes host-mounted `out.asm` artifact.</li>
+                  <li>Includes demo scripts for a repeatable run.</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="readme.html?path=projects/cs396-project3-microcompiler/README.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-file-text-o"></i> README
+                  </a>
+                  <a
+                    href="projects/cs396-project3-microcompiler/docker-compose.yml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-cubes"></i> Compose
+                  </a>
+                  <a
+                    href="projects/cs396-project3-microcompiler/run_demo.ps1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-terminal"></i> Demo Script
+                  </a>
+                </div>
+              </div>
+              <div class="showcase-media">
+                <div class="showcase-tile" aria-label="Microservices overview">
+                  <i class="fa fa-sitemap" aria-hidden="true"></i>
+                  <div class="showcase-tile-copy">
+                    <p class="showcase-tile-title">4 services</p>
+                    <p class="showcase-tile-subtitle">
+                      Gateway, lexer, parser, and codegen orchestrated with
+                      Docker Compose.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-item" id="image-pipeline">
+            <div class="showcase-inner">
+              <div class="showcase-copy">
+                <h2>Image Pipeline (AI + Feed + Dashboard)</h2>
+                <p class="project-kicker">
+                  Containerized image classification pipeline: FastAPI AI
+                  service, FastAPI feed/orchestrator, Flask dashboard.
+                </p>
+                <div class="project-meta-row">
+                  <span class="tag">PyTorch</span>
+                  <span class="tag">ResNet18</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">Microservices</span>
+                </div>
+                <ul class="showcase-bullets">
+                  <li>
+                    AI service validates images + returns class/confidence.
+                  </li>
+                  <li>
+                    Feed service selects input, calls AI, writes artifacts.
+                  </li>
+                  <li>Dashboard displays latest image + prediction.</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="readme.html?path=projects/project4-image-pipeline/README.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-file-text-o"></i> README
+                  </a>
+                  <a
+                    href="projects/project4-image-pipeline/docker-compose.yml"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-cubes"></i> Compose
+                  </a>
+                </div>
+              </div>
+              <div class="showcase-media">
+                <div class="showcase-tile" aria-label="Microservices layout">
+                  <i class="fa fa-cubes" aria-hidden="true"></i>
+                  <div class="showcase-tile-copy">
+                    <p class="showcase-tile-title">3 services</p>
+                    <p class="showcase-tile-subtitle">AI · Feed · Dashboard</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-item" id="toppernav">
+            <div class="showcase-inner">
+              <div class="showcase-copy">
+                <h2>TopperNav</h2>
+                <p class="project-kicker">
+                  Android campus room-finder with offline Room DB + live
+                  navigation metrics.
+                </p>
+                <div class="project-meta-row">
+                  <span class="tag">Kotlin</span>
+                  <span class="tag">Jetpack Compose</span>
+                  <span class="tag">Room DB</span>
+                  <span class="tag">CSV Import</span>
+                  <span class="tag">MVVM</span>
+                </div>
+                <ul class="showcase-bullets">
+                  <li>
+                    First-run CSV → Room database seeding for offline use.
+                  </li>
+                  <li>
+                    Straight-line distance, bearing, cardinal direction, ETA.
+                  </li>
+                  <li>
+                    Documented requirements + decisions for team delivery.
+                  </li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="readme.html?path=projects/TopperNav/TopperNavApp/README.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-file-text-o"></i> README
+                  </a>
+                  <a
+                    href="projects/TopperNav/docs/Organization___Technical_docs/Technical%20Documentation.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-file-pdf-o"></i> Technical Doc
+                  </a>
+                </div>
+              </div>
+              <div class="showcase-media">
+                <div
+                  class="device-frame device-frame--phone"
+                  aria-label="TopperNav demo video"
+                >
+                  <div class="device-frame__screen">
+                    <video
+                      class="device-frame__video"
+                      controls
+                      muted
+                      playsinline
+                      preload="metadata"
+                      poster="projects/TopperNav/TopperNavApp/app/src/main/ic_launcher-playstore.png"
+                    >
+                      <source
+                        src="assets/videos/toppernav-demo.mp4"
+                        type="video/mp4"
+                      />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-item" id="file-transfer">
+            <div class="showcase-inner">
+              <div class="showcase-copy">
+                <h2>Socket File Transfer + Performance Analysis</h2>
+                <p class="project-kicker">
+                  Java client/server file transfer with profiling, plus CSV
+                  parsing to summarize throughput, CPU, and memory.
+                </p>
+                <div class="project-meta-row">
+                  <span class="tag">Java</span>
+                  <span class="tag">TCP Sockets</span>
+                  <span class="tag">GZIP</span>
+                  <span class="tag">Profiling</span>
+                  <span class="tag">pandas</span>
+                </div>
+                <ul class="showcase-bullets">
+                  <li>Protocol sends metadata + streams file bytes.</li>
+                  <li>V2 adds GZIP compression for transfer comparison.</li>
+                  <li>Analysis script aggregates run metrics from CSV logs.</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="projects/CS396-Project1-FileTransfer/src/FileTransferApp_v1.java"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-code"></i> V1 Code
+                  </a>
+                  <a
+                    href="projects/CS396-Project1-FileTransfer/src/FileTransferApp_v2.java"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-code"></i> V2 Code
+                  </a>
+                  <a
+                    href="projects/CS396-Project1-FileTransfer/docs/Documents/Technical%20Documentation.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-file-pdf-o"></i> Technical Doc
+                  </a>
+                </div>
+              </div>
+              <div class="showcase-media">
+                <div
+                  class="showcase-tile"
+                  aria-label="Performance metrics summary"
+                >
+                  <i class="fa fa-line-chart" aria-hidden="true"></i>
+                  <div class="showcase-tile-copy">
+                    <p class="showcase-tile-title">Performance metrics</p>
+                    <p class="showcase-tile-subtitle">
+                      Throughput, CPU usage, and memory usage from CSV logs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-item" id="producer-consumer">
+            <div class="showcase-inner">
+              <div class="showcase-copy">
+                <h2>Producer–Consumer (Pthreads)</h2>
+                <p class="project-kicker">
+                  Multi-producer/multi-consumer concurrency in C with timing and
+                  performance comparison.
+                </p>
+                <div class="project-meta-row">
+                  <span class="tag">C</span>
+                  <span class="tag">pthreads</span>
+                  <span class="tag">Semaphores</span>
+                  <span class="tag">Concurrency</span>
+                </div>
+                <ul class="showcase-bullets">
+                  <li>Circular buffer + thread synchronization primitives.</li>
+                  <li>CLI for configuring buffer size/threads/workload.</li>
+                  <li>Write-up includes performance comparison figure.</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="projects/cs425-proj2-prod-cons/OS_Project2.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-file-pdf-o"></i> Write-up
+                  </a>
+                  <a
+                    href="projects/cs425-proj2-prod-cons/performance_comparison_updated.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-file-pdf-o"></i> Report Figure
+                  </a>
+                </div>
+              </div>
+              <div class="showcase-media">
+                <img
+                  src="projects/cs425-proj2-prod-cons/performance_comparison_updated.png"
+                  alt="Producer-consumer performance comparison chart"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-item" id="database-project">
+            <div class="showcase-inner">
+              <div class="showcase-copy">
+                <h2>Database Management Web App</h2>
+                <p class="project-kicker">
+                  PHP + MariaDB/MySQL web app for login, managing records, and
+                  generating reports.
+                </p>
+                <div class="project-meta-row">
+                  <span class="tag">PHP</span>
+                  <span class="tag">MySQL / MariaDB</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">Auth</span>
+                </div>
+                <ul class="showcase-bullets">
+                  <li>Login-protected dashboard for reps/customers.</li>
+                  <li>Schema + seed data provided via SQL dump.</li>
+                  <li>Local setup documented for XAMPP + phpMyAdmin.</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="readme.html?path=projects/cs351-database-project/README.md"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-file-text-o"></i> README
+                  </a>
+                  <a
+                    href="projects/cs351-database-project/CFG.sql"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-database"></i> SQL Schema
+                  </a>
+                </div>
+              </div>
+              <div class="showcase-media">
+                <div
+                  class="showcase-media-grid showcase-media-grid--single"
+                  aria-label="Database web app highlights"
+                >
+                  <div
+                    class="showcase-tile"
+                    aria-label="Authentication and roles"
+                  >
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <div class="showcase-tile-copy">
+                      <p class="showcase-tile-title">Auth + roles</p>
+                      <p class="showcase-tile-subtitle">
+                        Reps/customers dashboard access
+                      </p>
+                    </div>
+                  </div>
+                  <div class="showcase-tile" aria-label="Schema and reporting">
+                    <i class="fa fa-database" aria-hidden="true"></i>
+                    <div class="showcase-tile-copy">
+                      <p class="showcase-tile-title">Schema + reports</p>
+                      <p class="showcase-tile-subtitle">
+                        SQL dump, CRUD, and summaries
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
-      <!-- Projects Grid - Modern Cards -->
-      <section class="projects-section">
-        <div class="section-header">
-          <span class="section-label">Systems & Backend</span>
-          <h2>Engineering Projects</h2>
-        </div>
-        
-        <div class="projects-grid-v2">
-          <!-- Image Pipeline -->
-          <article class="project-card">
-            <div class="card-accent"></div>
-            <div class="card-content">
-              <div class="card-header">
-                <span class="card-icon"><i class="fa fa-cogs"></i></span>
-                <span class="card-category">Full Stack</span>
-              </div>
-              <h3>Image Pipeline</h3>
-              <p>Containerized AI pipeline: classify images → store results → display in React dashboard. Three services, one clean demo.</p>
-              <div class="card-tech">
-                <span>Python</span>
-                <span>React</span>
-                <span>Docker</span>
-              </div>
-              <div class="card-footer">
-                <a href="https://github.com/kadenhunt" class="card-link" target="_blank" rel="noreferrer">
-                  View on GitHub <i class="fa fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Compiler -->
-          <article class="project-card">
-            <div class="card-accent"></div>
-            <div class="card-content">
-              <div class="card-header">
-                <span class="card-icon"><i class="fa fa-terminal"></i></span>
-                <span class="card-category">Microservices</span>
-              </div>
-              <h3>Three-Pass Compiler</h3>
-              <p>Lexer → Parser → Codegen as separate services. Gateway exposes one /compile endpoint. Minimal, but real.</p>
-              <div class="card-tech">
-                <span>Python</span>
-                <span>HTTP/TCP</span>
-                <span>ASM Output</span>
-              </div>
-              <div class="card-footer">
-                <a href="https://github.com/kadenhunt" class="card-link" target="_blank" rel="noreferrer">
-                  View on GitHub <i class="fa fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Producer/Consumer -->
-          <article class="project-card">
-            <div class="card-accent"></div>
-            <div class="card-content">
-              <div class="card-header">
-                <span class="card-icon"><i class="fa fa-random"></i></span>
-                <span class="card-category">Operating Systems</span>
-              </div>
-              <h3>Producers/Consumers</h3>
-              <p>Bounded-buffer synchronization with semaphores and spinlocks. Measured performance across different configurations.</p>
-              <div class="card-tech">
-                <span>C</span>
-                <span>Pthreads</span>
-                <span>Semaphores</span>
-              </div>
-              <div class="card-footer">
-                <span class="card-note">Coursework Project</span>
-              </div>
-            </div>
-          </article>
-        </div>
+      <section class="container">
+        <h2 class="showcase-section-title">More work</h2>
       </section>
 
-      <!-- Interactive Project - Game -->
-      <section class="showcase-project">
-        <div class="showcase-visual">
-          <div class="game-frame">
-            <img src="assets/images/game-thumbnail.png" alt="Big Red Drop Game" />
-            <a href="https://gd.games/kaden_hunt/bigreddrop" class="play-btn" target="_blank" rel="noreferrer">
-              <i class="fa fa-play"></i>
-              <span>Play Now</span>
-            </a>
-          </div>
-        </div>
-        <div class="showcase-content">
-          <span class="project-category">Game Development</span>
-          <h2>Big Red Drop</h2>
-          <p>WKU-themed Plinko game built in GDevelop 5. Physics-tuned for satisfying drops, custom-designed assets, and a score system with multipliers.</p>
-          <ul class="showcase-features">
-            <li><i class="fa fa-check"></i> Physics-based gameplay</li>
-            <li><i class="fa fa-check"></i> High score saving</li>
-            <li><i class="fa fa-check"></i> Touch-friendly controls</li>
-            <li><i class="fa fa-check"></i> Custom WKU assets</li>
-          </ul>
-          <div class="showcase-tech">
-            <span>GDevelop 5</span>
-            <span>Illustrator</span>
-            <span>Event Logic</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Web & Design Section -->
-      <section class="projects-section alt-bg">
-        <div class="section-header">
-          <span class="section-label">Frontend & Design</span>
-          <h2>Web & Creative Work</h2>
-        </div>
-
-        <div class="projects-grid-v2">
-          <!-- Web Dev Final -->
-          <article class="project-card has-preview">
-            <div class="card-preview">
-              <img src="assets/projects/demo/finalscreenshot1.png" alt="Web Development Project" />
-              <div class="preview-overlay">
-                <a href="assets/projects/demo/index.html" target="_blank" rel="noreferrer" class="preview-btn">
-                  <i class="fa fa-external-link"></i> Live Demo
-                </a>
+      <section class="showcase-section">
+        <div class="showcase" aria-label="Additional projects showcase">
+          <article class="showcase-item" id="web-dev-final">
+            <div class="showcase-inner">
+              <div class="showcase-copy">
+                <h2>Web Development Final Project</h2>
+                <p class="project-kicker">
+                  Timed build from requirements to a responsive site
+                </p>
+                <div class="project-meta-row">
+                  <span class="tag">HTML/CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Responsive</span>
+                </div>
+                <ul class="showcase-bullets">
+                  <li>Structured layout system and responsive sections.</li>
+                  <li>
+                    Clean navigation + content hierarchy under time limits.
+                  </li>
+                </ul>
+                <div class="project-links">
+                  <a href="assets/projects/demo/index.html" target="_blank">
+                    <i class="fa fa-external-link"></i> Open Demo
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="card-content">
-              <div class="card-header">
-                <span class="card-category">Timed Build</span>
-              </div>
-              <h3>Web Dev Final</h3>
-              <p>Responsive site built from scratch in 2 hours. No frameworks, just clean HTML/CSS/JS under pressure.</p>
-              <div class="card-tech">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
+              <div class="showcase-media">
+                <img
+                  src="assets/projects/demo/finalscreenshot1.png"
+                  alt="Web Development Final Project screenshot"
+                  loading="lazy"
+                />
               </div>
             </div>
           </article>
 
-          <!-- Design Work -->
-          <article class="project-card has-preview">
-            <div class="card-preview">
-              <img src="assets/images/adobe/desert-rollers-logo.png" alt="Desert Rollers Logo Design" />
-            </div>
-            <div class="card-content">
-              <div class="card-header">
-                <span class="card-category">Branding</span>
+          <article class="showcase-item" id="creative-work">
+            <div class="showcase-inner">
+              <div class="showcase-copy">
+                <h2>Design & Creative Work</h2>
+                <p class="project-kicker">
+                  Adobe Creative Suite + UI/UX prototyping
+                </p>
+                <div class="project-meta-row">
+                  <span class="tag">Illustrator</span>
+                  <span class="tag">Photoshop</span>
+                  <span class="tag">Animate</span>
+                  <span class="tag">Figma</span>
+                </div>
+                <ul class="showcase-bullets">
+                  <li>Branding, illustration, and UI studies.</li>
+                  <li>Prototypes and redesigns focused on clarity and flow.</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="https://www.figma.com/proto/yh6KJ8kfKfcWJKkklBzhx1/KadenHuntWorstWebsiteRedesign?node-id=14-2&node-type=canvas&t=5z4exKKu0oiuunVL-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=14%3A2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-external-link"></i> Figma Prototype
+                  </a>
+                </div>
               </div>
-              <h3>Logo & Identity Work</h3>
-              <p>Team branding project: logo variants, mockups, and a style guide. Practice in visual consistency and presentation.</p>
-              <div class="card-tech">
-                <span>Illustrator</span>
-                <span>Figma</span>
+              <div class="showcase-media">
+                <div class="project-gallery" aria-label="Design work gallery">
+                  <div class="gallery-container">
+                    <button
+                      class="gallery-nav prev"
+                      aria-label="Previous image"
+                    >
+                      ❮
+                    </button>
+                    <div class="gallery-images">
+                      <figure>
+                        <img
+                          src="assets/images/adobe/desert-rollers-logo.png"
+                          alt="Custom bowling team logo design"
+                          loading="lazy"
+                        />
+                        <figcaption>Custom bowling team logo design</figcaption>
+                      </figure>
+                      <figure>
+                        <img
+                          src="assets/images/adobe/wku-infographic.png"
+                          alt="WKU campus living infographic"
+                          loading="lazy"
+                        />
+                        <figcaption>WKU campus living infographic</figcaption>
+                      </figure>
+                      <figure>
+                        <img
+                          src="assets/images/adobe/salad-illustration.png"
+                          alt="Vector illustration study"
+                          loading="lazy"
+                        />
+                        <figcaption>Vector illustration study</figcaption>
+                      </figure>
+                      <figure>
+                        <img
+                          src="assets/images/adobe/denzel-curry-collage.png"
+                          alt="Photo composition / collage"
+                          loading="lazy"
+                        />
+                        <figcaption>Photo composition / collage</figcaption>
+                      </figure>
+                      <figure>
+                        <img
+                          src="assets/images/adobe/email-blast.png"
+                          alt="Email blast design study"
+                          loading="lazy"
+                        />
+                        <figcaption>Email blast design study</figcaption>
+                      </figure>
+                      <figure>
+                        <img
+                          src="assets/images/adobe/golf-animation.gif"
+                          alt="Interactive animation with sound"
+                          loading="lazy"
+                        />
+                        <figcaption>
+                          Interactive animation with sound
+                        </figcaption>
+                      </figure>
+                      <figure>
+                        <img
+                          src="assets/images/adobe/website-redesign.png"
+                          alt="Website redesign prototype screenshot"
+                          loading="lazy"
+                        />
+                        <figcaption>Website redesign prototype</figcaption>
+                      </figure>
+                    </div>
+                    <button class="gallery-nav next" aria-label="Next image">
+                      ❯
+                    </button>
+                    <div class="gallery-dots"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
 
-          <!-- Figma Redesign -->
-          <article class="project-card">
-            <div class="card-accent"></div>
-            <div class="card-content">
-              <div class="card-header">
-                <span class="card-icon"><i class="fa fa-paint-brush"></i></span>
-                <span class="card-category">UI/UX</span>
+          <article class="showcase-item" id="big-red-drop">
+            <div class="showcase-inner">
+              <div class="showcase-copy">
+                <h2>Big Red Drop</h2>
+                <p class="project-kicker">WKU-themed Plinko-style game</p>
+                <div class="project-meta-row">
+                  <span class="tag">GDevelop</span>
+                  <span class="tag">Game Design</span>
+                  <span class="tag">Illustration</span>
+                </div>
+                <ul class="showcase-bullets">
+                  <li>Physics-based gameplay + scoring system.</li>
+                  <li>Custom WKU-themed art and UI polish.</li>
+                </ul>
+                <div class="project-links">
+                  <a
+                    href="https://gd.games/kaden_hunt/bigreddrop"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fa fa-play-circle"></i> Play
+                  </a>
+                </div>
               </div>
-              <h3>Website Redesign</h3>
-              <p>Took a dated site and redesigned it with clearer hierarchy, modern patterns, and a cohesive color system.</p>
-              <div class="card-tech">
-                <span>Figma</span>
-                <span>Prototyping</span>
-              </div>
-              <div class="card-footer">
-                <a href="https://www.figma.com/proto/yh6KJ8kfKfcWJKkklBzhx1/KadenHuntWorstWebsiteRedesign?node-id=14-2&node-type=canvas&t=5z4exKKu0oiuunVL-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=14%3A2" class="card-link" target="_blank" rel="noreferrer">
-                  View Prototype <i class="fa fa-arrow-right"></i>
-                </a>
+              <div class="showcase-media">
+                <img
+                  src="assets/images/game-thumbnail.png"
+                  alt="Big Red Drop game thumbnail"
+                  loading="lazy"
+                />
               </div>
             </div>
           </article>
-        </div>
-      </section>
-
-      <!-- GitHub Section -->
-      <section class="github-showcase">
-        <div class="section-header centered">
-          <span class="section-label">Open Source</span>
-          <h2>Latest on GitHub</h2>
-          <p>Recent public repositories — auto-updated from the API.</p>
-        </div>
-        <div id="repo-list" class="repo-grid-v2"></div>
-        <div class="github-cta">
-          <a href="https://github.com/kadenhunt" class="btn-secondary" target="_blank" rel="noreferrer">
-            <i class="fa fa-github"></i> View Full Profile
-          </a>
-        </div>
-      </section>
-
-      <!-- Quick Hits -->
-      <section class="quick-hits">
-        <div class="section-header">
-          <span class="section-label">Algorithms</span>
-          <h2>Coursework Highlights</h2>
-        </div>
-        <div class="hits-grid">
-          <div class="hit-item">
-            <div class="hit-icon"><i class="fa fa-phone"></i></div>
-            <h4>Phonewords</h4>
-            <p>Convert phone numbers to word representations. Constraints + search + smart combination handling.</p>
-          </div>
-          <div class="hit-item">
-            <div class="hit-icon"><i class="fa fa-futbol-o"></i></div>
-            <h4>Football Scoring DP</h4>
-            <p>Find minimum-length scoring sequences. A good reminder that "works" ≠ "efficient."</p>
-          </div>
-          <div class="hit-item">
-            <div class="hit-icon"><i class="fa fa-history"></i></div>
-            <h4>First Portfolio</h4>
-            <p>My original portfolio site. Rough, but it taught me what breaks on real screens.</p>
-          </div>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 Kaden Hunt Portfolio</p>
+      <p>&copy; 2025 Kaden Hunt Portfolio</p>
       <div class="social-links">
         <a
           href="https://www.linkedin.com/in/kaden-hunt-106360306/"
@@ -360,7 +706,11 @@
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/animations.js"></script>
-    <script src="assets/js/github-repos.js"></script>
+    <script src="assets/js/gallery.js"></script>
+    <div id="lightbox" class="lightbox">
+      <button class="lightbox-close" aria-label="Close lightbox">×</button>
+      <img class="lightbox-image" src="" alt="" />
+    </div>
     <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
       <i class="fa fa-arrow-up"></i>
     </button>

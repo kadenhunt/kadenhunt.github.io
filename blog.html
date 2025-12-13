@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Notes and write-ups from Kaden Hunt on CS and UX." />
+    <meta name="description" content="Kaden Hunt's Blog" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -13,20 +21,20 @@
     <title>Blog - Kaden Hunt</title>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
-      <nav class="topnav" id="myTopnav" aria-label="Primary navigation">
+      <nav class="topnav" id="myTopnav">
         <div class="nav-wrapper">
           <a href="index.html" class="logo">KH</a>
           <div class="desktop-menu">
             <a href="index.html">Home</a>
             <a href="projects.html">Work</a>
+            <a href="resume.html">Resume</a>
             <a href="contact.html">Contact</a>
-            <a href="blog.html" class="active">Blog</a>
           </div>
           <button
             class="menu-toggle"
-            type="button"
-            aria-label="Open menu"
+            aria-label="Toggle Menu"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -36,32 +44,74 @@
         <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
           <div class="menu-header">
             <span>Menu</span>
-            <button class="close-menu" type="button" aria-label="Close menu">
+            <button class="close-menu" aria-label="Close Menu">
               <i class="fa fa-times"></i>
             </button>
           </div>
           <a href="index.html">Home</a>
           <a href="projects.html">Work</a>
+          <a href="resume.html">Resume</a>
           <a href="contact.html">Contact</a>
-          <a href="blog.html" class="active">Blog</a>
         </div>
       </nav>
-      <div class="overlay" aria-hidden="true"></div>
+      <div class="overlay"></div>
     </header>
 
-    <main>
-      <section class="container">
-        <p class="eyebrow">Blog</p>
-        <h1>Notes on CS+UX</h1>
-        <p class="muted">
-          Short write-ups on design decisions, front-end engineering, and what I’m learning as I build.
+    <main id="main">
+      <section class="projects-header container">
+        <h1>Blog</h1>
+        <p class="projects-subtitle">
+          Notes on projects, UI/UX, and what I learn while building.
         </p>
-        <div id="blog-list" class="blog-list" aria-live="polite"></div>
+      </section>
+
+      <section class="container">
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-card-inner">
+              <h2>Coming soon</h2>
+              <p class="project-kicker">Not published right now.</p>
+              <div class="project-meta-row">
+                <span class="tag">Update</span>
+                <span class="tag">Site</span>
+              </div>
+              <p>I’ll enable this once I have a few posts worth reading.</p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-inner">
+              <h2>Post idea: How I built TopperNav</h2>
+              <p class="project-kicker">
+                UX goals → navigation flow → implementation notes.
+              </p>
+              <div class="project-meta-row">
+                <span class="tag">Android</span>
+                <span class="tag">UX</span>
+                <span class="tag">Case Study</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-inner">
+              <h2>Post idea: Microservices lessons learned</h2>
+              <p class="project-kicker">
+                Docker, boundaries, and what I’d do differently.
+              </p>
+              <div class="project-meta-row">
+                <span class="tag">Docker</span>
+                <span class="tag">Microservices</span>
+                <span class="tag">Engineering</span>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2024 Kaden Hunt Portfolio</p>
+      <p>&copy; 2025 Kaden Hunt Portfolio</p>
       <div class="social-links">
         <a
           href="https://www.linkedin.com/in/kaden-hunt-106360306/"
@@ -90,7 +140,7 @@
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/animations.js"></script>
-    <script src="assets/js/blog.js"></script>
+
     <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
       <i class="fa fa-arrow-up"></i>
     </button>

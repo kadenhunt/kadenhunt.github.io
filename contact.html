@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -12,20 +18,20 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
-      <nav class="topnav" aria-label="Primary navigation">
+      <nav class="topnav" id="myTopnav">
         <div class="nav-wrapper">
           <a href="index.html" class="logo">KH</a>
           <div class="desktop-menu">
             <a href="index.html">Home</a>
             <a href="projects.html">Work</a>
+            <a href="resume.html">Resume</a>
             <a href="contact.html" class="active">Contact</a>
-            <a href="blog.html">Blog</a>
           </div>
           <button
             class="menu-toggle"
-            type="button"
-            aria-label="Open menu"
+            aria-label="Toggle Menu"
             aria-controls="mobile-menu"
             aria-expanded="false"
           >
@@ -35,19 +41,19 @@
         <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
           <div class="menu-header">
             <span>Menu</span>
-            <button class="close-menu" type="button" aria-label="Close menu">
+            <button class="close-menu" aria-label="Close Menu">
               <i class="fa fa-times"></i>
             </button>
           </div>
           <a href="index.html">Home</a>
           <a href="projects.html">Work</a>
+          <a href="resume.html">Resume</a>
           <a href="contact.html" class="active">Contact</a>
-          <a href="blog.html">Blog</a>
         </div>
       </nav>
-      <div class="overlay" aria-hidden="true"></div>
+      <div class="overlay"></div>
     </header>
-    <main>
+    <main id="main" class="page-contact">
       <iframe
         allowfullscreen
         allow="geolocation; microphone; camera"
@@ -56,7 +62,7 @@
       ></iframe>
     </main>
     <footer>
-      <p>&copy; 2024 Kaden Hunt Portfolio</p>
+      <p>&copy; 2025 Kaden Hunt Portfolio</p>
       <div class="social-links">
         <a
           href="https://www.linkedin.com/in/kaden-hunt-106360306/"

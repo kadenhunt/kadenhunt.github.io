@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Project README" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/navigation.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>README - Kaden Hunt</title>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dompurify@3.1.7/dist/purify.min.js"
+      defer
+    ></script>
+    <script src="assets/js/readme-viewer.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header>
+      <nav class="topnav" id="myTopnav">
+        <div class="nav-wrapper">
+          <a href="index.html" class="logo">KH</a>
+          <div class="desktop-menu">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Work</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <button
+            class="menu-toggle"
+            aria-label="Toggle Menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger"></span>
+          </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+          <div class="menu-header">
+            <span>Menu</span>
+            <button class="close-menu" aria-label="Close Menu">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Work</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+      <div class="overlay"></div>
+    </header>
+
+    <main id="main">
+      <section class="projects-header container">
+        <h1 id="readme-title">README</h1>
+        <p id="readme-status" class="projects-subtitle"></p>
+      </section>
+
+      <section class="container">
+        <article class="project-card">
+          <div class="project-card-inner">
+            <div id="readme-content" class="markdown-body"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Kaden Hunt Portfolio</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/kaden-hunt-106360306/"
+          target="_blank"
+          aria-label="LinkedIn Profile"
+        >
+          <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+        |
+        <a
+          href="https://www.instagram.com/_kadenhunt/"
+          target="_blank"
+          aria-label="Instagram Profile"
+        >
+          <i class="fa fa-instagram" aria-hidden="true"></i> Instagram
+        </a>
+      </div>
+      <div class="contact-info">
+        <p>
+          Email:
+          <a href="mailto:Kaden.B.Hunt@outlook.com">Kaden.B.Hunt@outlook.com</a>
+        </p>
+        <p>Phone: <a href="tel:+15029743661">(502) 974-3661</a></p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+  </body>
+</html>

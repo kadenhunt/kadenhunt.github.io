@@ -1,46 +1,74 @@
 .topnav {
-  background-color: var(--color-nav-bg);
+  background: var(--metal-sheen),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55));
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .topnav.scrolled {
-  background-color: var(--color-nav-bg-scrolled);
-  box-shadow: var(--shadow-sm);
+  background: var(--metal-sheen),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.72));
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.85rem 1.25rem;
-  max-width: 1200px;
+  padding: 1rem 2rem;
+  max-width: 1100px;
   margin: 0 auto;
-  min-height: var(--nav-height);
-  gap: 1rem;
 }
 
 /* Logo Styles */
 .logo {
-  color: var(--color-text);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  color: var(--text);
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, var(--color-text), var(--color-text));
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  background: var(--metal-sheen),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.35));
+  overflow: hidden;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    115deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.12) 35%,
+    rgba(255, 255, 255, 0) 65%
+  );
+  transform: translateX(-30%);
+  pointer-events: none;
 }
 
 .logo:hover {
-  background-image: linear-gradient(90deg, var(--color-text), var(--color-accent));
-  animation: gradientSlide 1s ease forwards;
+  border-color: var(--accent);
+  background: var(--metal-sheen),
+    linear-gradient(180deg, rgba(176, 18, 42, 0.18), rgba(0, 0, 0, 0.4));
+}
+
+.logo:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 /* Desktop Menu */
@@ -48,17 +76,17 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 .desktop-menu a,
 .mobile-menu a {
-  color: var(--color-text);
+  color: var(--text);
   text-decoration: none;
   padding: 0.8rem 1rem;
   position: relative;
   transition: color 0.3s ease;
   display: inline-block;
+  border-radius: 999px;
 }
 
 .desktop-menu a::after,
@@ -69,7 +97,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--color-accent);
+  background-color: var(--accent);
   transition: width 0.3s ease;
 }
 
@@ -77,7 +105,8 @@
 .mobile-menu a:hover,
 .desktop-menu a.active,
 .mobile-menu a.active {
-  color: var(--color-accent);
+  color: var(--text);
+  background: rgba(176, 18, 42, 0.14);
 }
 
 .desktop-menu a:hover::after,
@@ -92,17 +121,18 @@
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: var(--text);
   font-size: 1.5rem;
   cursor: pointer;
-  z-index: 1101;
-  padding: 0.5rem;
-  border-radius: var(--radius-sm);
+  z-index: 1002;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
-.menu-toggle:focus-visible {
-  outline: 3px solid rgba(var(--color-accent-rgb, 244, 63, 94), 0.55);
-  outline-offset: 3px;
+.menu-toggle.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* Hamburger Icon */
@@ -110,7 +140,7 @@
   display: block;
   width: 25px;
   height: 3px;
-  background: var(--color-text);
+  background: rgba(255, 255, 255, 0.92);
   position: relative;
   transition: all 0.3s ease;
 }
@@ -121,7 +151,7 @@
   position: absolute;
   width: 25px;
   height: 3px;
-  background: var(--color-text);
+  background: rgba(255, 255, 255, 0.92);
   left: 0;
   transition: all 0.3s ease;
 }
@@ -138,23 +168,25 @@
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: 0;
-  width: min(86vw, 340px);
+  right: -100%;
+  width: 80%;
   max-width: 300px;
   height: 100vh;
-  background-color: var(--color-nav-bg);
-  z-index: 1100;
-  transform: translateX(110%);
-  transition: transform 0.25s ease;
+  background: var(--metal-sheen),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.92));
+  z-index: 1000;
+  transition: right 0.3s ease;
   padding: 20px;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65);
+  border-left: 1px solid var(--border);
 }
 
 .mobile-menu.active {
-  transform: translateX(0);
+  right: 0;
+}
+.mobile-menu.active ~ .nav-wrapper .menu-toggle {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .menu-header {
@@ -163,14 +195,14 @@
   align-items: center;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--color-accent);
-  color: var(--color-text);
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
 }
 
 .close-menu {
   background: none;
   border: none;
-  color: var(--color-text);
+  color: var(--text);
   font-size: 24px;
   cursor: pointer;
   padding: 5px;
@@ -189,7 +221,7 @@
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  z-index: 1090;
+  z-index: 999;
 }
 
 .overlay.active {
@@ -217,12 +249,22 @@
     display: block;
   }
 
-  .nav-wrapper {
-    padding: 0.8rem 1rem;
-  }
-
   .desktop-menu a::after,
   .mobile-menu a::after {
     bottom: 0; /* Adjust for mobile */
+  }
+
+  /* Mobile menu links: stacked, full-width */
+  .mobile-menu a {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 0.9rem;
+    margin: 0.2rem 0;
+    border-radius: 12px;
+    text-align: left;
+  }
+
+  .mobile-menu a::after {
+    display: none;
   }
 }
