@@ -1,0 +1,27 @@
+[submodule "projects/CS396-Project1-FileTransfer"]
+	path = projects/CS396-Project1-FileTransfer
+	url = https://github.com/kadenhunt/CS396-Project1-FileTransfer.git
+
+[submodule "projects/TopperNav"]
+	path = projects/TopperNav
+	url = https://github.com/kadenhunt/TopperNav.git
+
+[submodule "projects/cs351-database-project"]
+	path = projects/cs351-database-project
+	url = https://github.com/kadenhunt/cs351-database-project.git
+
+[submodule "projects/cs396-project2-test-automation"]
+	path = projects/cs396-project2-test-automation
+	url = https://github.com/kadenhunt/cs396-project2-test-automation.git
+
+[submodule "projects/cs396-project3-microcompiler"]
+	path = projects/cs396-project3-microcompiler
+	url = https://github.com/kadenhunt/cs396-project3-microcompiler.git
+
+[submodule "projects/cs425-proj2-prod-cons"]
+	path = projects/cs425-proj2-prod-cons
+	url = https://github.com/kadenhunt/cs425-proj2-prod-cons.git
+
+[submodule "projects/project4-image-pipeline"]
+	path = projects/project4-image-pipeline
+	url = https://github.com/kadenhunt/project4-image-pipeline.git
